@@ -7,9 +7,11 @@ s3 = ''
 for x in range(s1_len + 1):
     table.append([0] * (s2_len + 1))
 
+
 def print_board(table):
     for row in table:
         print((row))
+
 
 for i in range(1, s1_len + 1):
     for j in range(1, s2_len + 1):

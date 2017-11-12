@@ -1,9 +1,10 @@
-A = [1,2,3]
+A = [1, 2, 3]
 total = 4
 
 globalList = []
 
-#recursion function to find combinations of numbers in array
+
+# recursion function to find combinations of numbers in array
 def findListCount(currentList):
     global A
     global globalList
@@ -19,18 +20,15 @@ def findListCount(currentList):
             # print(nextList)
             findListCount(nextList)
 
+
 for i in A:
     currentList = [i]
     if i <= total:
         findListCount(currentList)
 
-
 globalSet = set()
 # print('globalList =',globalList)
 for perlist in globalList:
     globalSet.add(tuple(sorted(perlist)))
-print('globalSet =',globalSet)
+print('globalSet =', globalSet)
 print('count = ', len(globalSet))
-
-
-
